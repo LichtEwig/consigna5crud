@@ -4,12 +4,13 @@ import sqlite3 as sq3
 def get_connetion():
     global database
     database = 'netflix_oscar.db'
-    pass
+    conn = sq3.connect(database)
     return conn
 
 # DESCONEXION
 def close_connetion():
-    pass
+    cursor.close()
+    conn.close()
       
 # CONSULTA
 def read_database():
